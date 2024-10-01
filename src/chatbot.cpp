@@ -84,6 +84,7 @@ ChatBot::ChatBot(ChatBot&& source) noexcept{
 
     _image = source._image;
     _chatLogic = source._chatLogic;
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
     _currentNode = source._currentNode;
 
@@ -105,6 +106,7 @@ ChatBot& ChatBot::operator=(ChatBot&& source) noexcept {
 
     _image = source._image;
     _chatLogic = source._chatLogic;
+    _chatLogic->SetChatbotHandle(this);
     _rootNode = source._rootNode;
     _currentNode = source._currentNode;
 
